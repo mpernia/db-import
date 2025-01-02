@@ -65,9 +65,9 @@ function import_database()
         /TargetConnectionString:"Server=tcp:${HOST},${PORT};Database=${DATABASE};User ID=${USER};Password=${PASSWD};Encrypt=False;TrustServerCertificate=True"
 
     if [ $? -eq 0 ]; then
-        echo "${GREEN}The import to database '${DATABASE}' completed successfully.${RESET}\n"
+        printf "${GREEN}The import to database '${DATABASE}' completed successfully.${RESET}\n"
     else
-        echo "${RED_BG_WHITE}An error occurred while importing database '${YELLOW}${DATABASE}${RESET}'.${RESET}\n"
+        printf "${RED_BG_WHITE}An error occurred while importing database '${YELLOW}${DATABASE}${RESET}'.${RESET}\n"
         exit 1
     fi
 }
